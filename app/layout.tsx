@@ -1,11 +1,10 @@
 "use client";
-import type React from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import { HeroUIProvider } from "@heroui/react";
 import { Analytics } from "@vercel/analytics/next";
-import {HeroUIProvider} from "@heroui/react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Inter } from "next/font/google";
+import type React from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
