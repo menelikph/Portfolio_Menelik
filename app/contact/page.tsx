@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import ContactForm from "@/components/contact-form"
+import ContactForm from "@/app/components/contact-form"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { EMAIL } from "../../constants/contants"
 

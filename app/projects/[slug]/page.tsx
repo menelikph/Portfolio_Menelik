@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import ProjectDetail, { Project } from "@/components/project-detail";
+import ProjectDetail, { Project } from "@/app/components/project-detail";
 
 const projects: Project[] = [
   {
