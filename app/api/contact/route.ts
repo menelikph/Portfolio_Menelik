@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { connectToDatabase } from "@/lib/mongodb"
-import Contact from "@/models/Contact"
+import ContactMessage from "@/models/Contact"
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     }
 
     await connectToDatabase()
-    const contact = await Contact.create({
+    const contact = await ContactMessage.create({
       fullName,
       email,
       message,
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ message: "Message sent successfully", data: contact }, { status: 201 })
   } catch (error) {
-    console.error("[v0] Contact API error:", error)
+    console.error("Contact API error:", error)
     return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 })
   }
 }
@@ -34,11 +34,11 @@ export async function POST(request: NextRequest) {
 export async function GET() {
   try {
     await connectToDatabase()
-    const contacts = await Contact.find().sort({ createdAt: -1 })
+    const contacts = await ContactMessage.find().sort({ createdAt: -1 })
 
     return NextResponse.json({ data: contacts }, { status: 200 })
   } catch (error) {
-    console.error("[v0] Contact GET error:", error)
+    console.error("Contact GET error:", error)
     return NextResponse.json({ error: "Failed to fetch contacts" }, { status: 500 })
   }
 }

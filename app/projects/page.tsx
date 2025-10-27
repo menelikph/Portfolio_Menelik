@@ -4,68 +4,9 @@ import { motion } from "framer-motion"
 import { Card, CardBody, CardFooter, Chip } from "@heroui/react"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
+import { projects } from "@/constants/contants"
 
-const projects = [
-  {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce solution built with Next.js, featuring product management, shopping cart, and Stripe payment integration.",
-    image: "/modern-ecommerce-interface.png",
-    tags: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: "task-management",
-    title: "Task Management App",
-    description:
-      "Collaborative task manager with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "/task-management-dashboard.png",
-    tags: ["React", "MongoDB", "Socket.io", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: "weather-dashboard",
-    title: "Weather Dashboard",
-    description:
-      "Real-time weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-    image: "/weather-dashboard-dark-theme.jpg",
-    tags: ["React", "API Integration", "Charts", "TypeScript"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: "portfolio-builder",
-    title: "Portfolio Builder",
-    description:
-      "No-code portfolio builder allowing users to create beautiful portfolio websites with customizable templates.",
-    image: "/portfolio-builder-interface.png",
-    tags: ["Next.js", "CMS", "Tailwind", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: "chat-application",
-    title: "Real-Time Chat App",
-    description: "Modern chat application with real-time messaging, file sharing, and group chat capabilities.",
-    image: "/chat-application-dark-interface.jpg",
-    tags: ["React", "WebSocket", "Node.js", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: "analytics-dashboard",
-    title: "Analytics Dashboard",
-    description:
-      "Comprehensive analytics dashboard with data visualization, reporting, and real-time metrics tracking.",
-    image: "/analytics-dashboard-charts-graphs.jpg",
-    tags: ["Next.js", "D3.js", "TypeScript", "API"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-]
+
 
 export default function ProjectsPage() {
   return (

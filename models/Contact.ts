@@ -1,10 +1,10 @@
-import mongoose, { Schema, type Model } from "mongoose"
+import mongoose, { Schema, type Model } from "mongoose";
 
 export interface IContact {
-  fullName: string
-  email: string
-  message: string
-  createdAt: Date
+  fullName: string;
+  email: string;
+  message: string;
+  createdAt: Date;
 }
 
 const ContactSchema = new Schema<IContact>({
@@ -31,8 +31,9 @@ const ContactSchema = new Schema<IContact>({
     type: Date,
     default: Date.now,
   },
-})
+});
 
-const Contact: Model<IContact> = mongoose.models.Contact || mongoose.model<IContact>("Contact", ContactSchema)
+const ContactMessage: Model<IContact> =
+  mongoose.models.Contact || mongoose.model<IContact>("Contact", ContactSchema);
 
-export default Contact
+export default ContactMessage;

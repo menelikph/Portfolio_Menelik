@@ -1,10 +1,12 @@
 "use client";
-import Footer from "./components/footer";
-import Header from "./components/header";
 import { HeroUIProvider } from "@heroui/react";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import type React from "react";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import ThemeWrapper from "./components/ThemeWrapper";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <title>Menelik's Portfolio</title>
-        <meta name="description" content="Welcome to Menelik's personal portfolio website." />
+        <title>Menelik&apos;s Portfolio</title>
+        <meta
+          name="description"
+          content="Welcome to Menelik's personal portfolio website."
+        />
         <link rel="icon" href="/mk_logo.png" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -28,13 +33,17 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} font-sans antialiased`}>
-        <HeroUIProvider>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </HeroUIProvider>
+        <NextThemesProvider attribute="class" defaultTheme="dark">
+          <HeroUIProvider>
+            <ThemeWrapper>
+              <div className="flex flex-col min-h-screen">
+                <Header />
+                <main className="flex-1">{children}</main>
+                <Footer />
+              </div>
+            </ThemeWrapper>
+          </HeroUIProvider>
+        </NextThemesProvider>
         <Analytics />
       </body>
     </html>
