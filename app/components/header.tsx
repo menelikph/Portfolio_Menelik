@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@heroui/react"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { ThemeSwitcher } from "./ThemeSwitcher"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -57,6 +58,7 @@ export default function Header() {
                 )}
               </Link>
             ))}
+            <ThemeSwitcher />
           </div>
 
           {/* Mobile Menu Button */}

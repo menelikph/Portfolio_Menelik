@@ -28,11 +28,11 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-                <span className="staatliches-regular bg-linear-to-r from-purple-500 to-purple-200 bg-clip-text text-transparent">Menelik Puerta</span>
+                <span className="staatliches-regular bg-linear-to-r dark:from-purple-500  dark:to-purple-200 from-purple-500 to-purple-950 bg-clip-text text-transparent">Menelik Puerta</span>
             </motion.h1>
 
             <motion.h2
-              className="text-2xl md:text-3xl text-purple-100 font-medium"
+              className="text-2xl md:text-3xl text-purple-950 dark:text-purple-100 font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
