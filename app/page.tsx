@@ -170,17 +170,12 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: "E-Commerce Platform",
+                  title: "Portfolio project",
                   description:
-                    "Full-stack e-commerce solution with Next.js and Stripe",
-                  tags: ["Next.js", "TypeScript", "Stripe"],
+                    "A portfolio website to showcase my projects and skills, built with Next.js and HeroUI.",
+                  tags: ["Next.js", "TypeScript", "HeroUI", "Tailwind CSS", "MongoDB"],
                 },
-                {
-                  title: "Task Management App",
-                  description:
-                    "Collaborative task manager with real-time updates",
-                  tags: ["React", "MongoDB", "Socket.io"],
-                },
+                
               ].map((project, index) => (
                 <motion.div
                   key={project.title}

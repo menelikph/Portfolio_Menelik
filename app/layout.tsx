@@ -1,10 +1,10 @@
 "use client";
-import Footer from "./components/footer";
-import Header from "./components/header";
 import { HeroUIProvider } from "@heroui/react";
 import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import type React from "react";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,8 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <title>Menelik's Portfolio</title>
-        <meta name="description" content="Welcome to Menelik's personal portfolio website." />
+        <title>Menelik&apos;s Portfolio</title>
+        <meta
+          name="description"
+          content="Welcome to Menelik's personal portfolio website."
+        />
         <link rel="icon" href="/mk_logo.png" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
