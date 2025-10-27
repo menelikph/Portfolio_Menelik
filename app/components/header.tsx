@@ -66,6 +66,7 @@ export default function Header() {
                 )}
               </Link>
             ))}
+            <ThemeSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,8 +111,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="flex justify-center">
-
-                <ThemeSwitcher />
+                  <ThemeSwitcher />
                 </div>
               </div>
             </motion.div>
