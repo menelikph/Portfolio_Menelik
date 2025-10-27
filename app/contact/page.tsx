@@ -17,7 +17,7 @@ export default function ContactPage() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Get in Touch</h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Have a project in mind or just want to chat? Feel free to reach out. I'm always open to discussing new
+            Have a project in mind or just want to chat? Feel free to reach out. I&apos;m always open to discussing new
             opportunities and collaborations.
           </p>
         </motion.div>
@@ -80,10 +80,10 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-secondary/50 border border-border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Let's Work Together</h3>
+              <h3 className="text-xl font-semibold mb-4">Let&apos;s Work Together</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm currently available for freelance work and full-time opportunities. Whether you have a project in
-                mind or just want to connect, I'd love to hear from you.
+                I&apos;m currently available for freelance work and full-time opportunities. Whether you have a project in
+                mind or just want to connect, I&apos;d love to hear from you.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 I typically respond within 24 hours during business days.

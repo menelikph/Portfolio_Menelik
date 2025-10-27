@@ -19,7 +19,7 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors},
     reset,
   } = useForm<ContactFormData>()
 
@@ -43,7 +43,7 @@ export default function ContactForm() {
       setSubmitStatus("success")
       reset()
     } catch (error) {
-      console.error("[v0] Form submission error:", error)
+      console.error("Form submission error:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)

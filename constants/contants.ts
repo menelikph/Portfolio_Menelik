@@ -1,5 +1,4 @@
 import { Project } from "@/app/components/project-detail";
-import { mongo } from "mongoose";
 
 export const EMAIL = "menelikdev@gmail.com";
 export const GITHUB_URL = "https://github.com/menelikph";

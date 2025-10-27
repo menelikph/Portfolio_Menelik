@@ -1,6 +1,6 @@
-import { notFound } from "next/navigation";
-import ProjectDetail, { Project } from "@/app/components/project-detail";
+import ProjectDetail from "@/app/components/project-detail";
 import { projects } from "@/constants/contants";
+import { notFound } from "next/navigation";
 
 
 export async function generateStaticParams() {

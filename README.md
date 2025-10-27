@@ -60,34 +60,35 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/portfolio?retryW
 
 Replace with your actual MongoDB connection string.
 
-## Project Structure (detailed)
+## Project Structure
 
-The project follows Next.js App Router conventions. Key folders and files:
-
-- `app/`
-	- `api/contact/route.ts` — serverless API route used by the contact form to persist submissions.
-	- `projects/` — listing and dynamic routes for project detail pages (`page.tsx` and `[slug]/page.tsx`).
-	- `contact/page.tsx` — public contact page containing the `ContactForm` component.
-	- `layout.tsx` — root layout where global providers and `globals.css` are loaded (contains `HeroUIProvider`).
-	- `page.tsx` — home page with the main Hero section and featured projects.
-	- `globals.css` — global styles, Tailwind directives, and theme CSS variables (including Hero UI variables).
-
-- `components/`
-	- `header.tsx` / `footer.tsx` — site chrome and navigation.
-	- `contact-form.tsx` — reusable form component using `react-hook-form`.
-	- `ThemeSwitcher.tsx`, `ThemeWrapper.tsx` — theme helpers (if used) to toggle dark/light classes.
-	- other UI components and small composition pieces used throughout pages.
-
-- `lib/` — utilities and services (e.g., `mongodb.ts` for DB connection, `google-auth.ts`, `projects.ts`).
-
-- `models/` — Mongoose schema definitions such as `Contact.ts`.
-
-- `package.json` and lockfile — dependency manifest. Use your package manager of choice (`pnpm`, `npm`).
-
-Notes:
-
-- `app/layout.tsx` imports `app/globals.css` — ensure this import remains so Tailwind and Hero UI styles are included in builds.
-- The project may include a small `app/hero.cjs` wrapper to allow PostCSS/Tailwind to load the Hero UI plugin at build time; do not remove it without replacing the loader.
+\`\`\`
+├── app/
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts          # Contact form API endpoint
+│   ├── projects/
+│   │   ├── [slug]/
+│   │   │   └── page.tsx          # Dynamic project detail page
+│   │   └── page.tsx              # Projects listing page
+│   ├── contact/
+│   │   └── page.tsx              # Contact page
+│   ├── layout.tsx                # Root layout with Header & Footer
+│   ├── page.tsx                  # Home page
+│   └── globals.css               # Global styles
+├── components/
+│   ├── header.tsx                # Navigation header
+│   ├── footer.tsx                # Footer component
+│   ├── contact-form.tsx          # Contact form with validation
+│   └── project-detail.tsx        # Project detail component
+│   └── ThemeSwitcher.tsx         # Theme swicher component
+│   └── ThemeWrapper.tsx          # Theme wrapper component
+├── lib/
+│   └── mongodb.ts                # MongoDB connection utility
+├── models/
+│   └── Contact.ts                # Mongoose Contact model
+└── package.json
+\`\`\`
 
 ## Technologies Used
 
