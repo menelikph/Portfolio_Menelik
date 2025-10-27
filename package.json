@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@heroui/react": "^2.8.5",
+    "@heroui/theme": "latest",
     "@tailwindcss/postcss": "^4.1.16",
     "@vercel/analytics": "latest",
     "class-variance-authority": "^0.7.1",
