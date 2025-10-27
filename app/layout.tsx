@@ -7,6 +7,8 @@ import type React from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import ThemeWrapper from "./components/ThemeWrapper";
+import { I18nProvider } from "./context/I18nContext";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,11 +38,13 @@ export default function RootLayout({
         <NextThemesProvider attribute="class" defaultTheme="dark">
           <HeroUIProvider>
             <ThemeWrapper>
-              <div className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-1">{children}</main>
-                <Footer />
-              </div>
+              <I18nProvider>
+                <div className="flex flex-col min-h-screen">
+                  <Header />
+                  <main className="flex-1">{children}</main>
+                  <Footer />
+                </div>
+              </I18nProvider>
             </ThemeWrapper>
           </HeroUIProvider>
         </NextThemesProvider>

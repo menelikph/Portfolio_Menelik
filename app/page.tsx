@@ -5,8 +5,11 @@ import { Button } from "@heroui/react";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { EMAIL, GITHUB_URL, LINKEDIN_URL, TECNOLOGIES } from "../constants/contants";
+import { useI18n } from "./context/I18nContext";
 
 export default function HomePage() {
+const { dictionary } = useI18n();
+  
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -46,9 +49,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              I build accessible, pixel-perfect digital experiences for the web.
-              Specializing in React, Next.js, and TypeScript to create
-              interfaces that blend thoughtful design with robust engineering.
+              {dictionary["title-description"]}
             </motion.p>
 
             <motion.div
@@ -66,7 +67,7 @@ export default function HomePage() {
               >
                 <>
                   {" "}
-                  <p>View Projects</p> <ArrowRight className="w-6 h-6" />{" "}
+                  <p>{dictionary["button-projects"]}</p> <ArrowRight className="w-6 h-6" />{" "}
                 </>
               </Button>
               <Button
@@ -76,7 +77,7 @@ export default function HomePage() {
                 size="lg"
                 className="border-purple-500 text-purple-500 hover:bg-purple-500/10 py-4 px-6  rounded-lg font-medium"
               >
-                Get in Touch
+                {dictionary["button-contact"]}
               </Button>
             </motion.div>
 
